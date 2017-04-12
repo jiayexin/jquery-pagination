@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>demo</title>
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="j-pagination.css">
+  <script type="text/javascript" src="j-pagination.min.js"></script>
+</head>
+<body>
+  <div id="sm"></div>
+  <br>
+  <div id="md"></div>
+  <br>
+  <div id="lg"></div>
+
+  <script>
+    $(function() {
+      // 初始化分页
+      $('#sm').jPagination({
+        isAjax: false,
+        size: 'sm',
+        maxPage: 5,
+        totalPage: 32,
+        callback: {
+          staticFun: function(res) {
+            console.log('当前页码: ', res)
+          }
+        }
+      });
+
+      $('#md').jPagination({
+        isAjax: false,
+        size: 'md',
+        maxPage: 5,
+        totalPage: 32,
+        callback: {
+          staticFun: function(res) {
+            console.log('当前页码: ', res)
+          }
+        }
+      });
+
+      $('#lg').jPagination({
+        isAjax: false,
+        size: 'lg',
+        maxPage: 5,
+        totalPage: 32,
+        callback: {
+          staticFun: function(res) {
+            console.log('当前页码: ', res)
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

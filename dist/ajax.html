@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ajax - demo</title>
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="j-pagination.css">
+  <script type="text/javascript" src="j-pagination.min.js"></script>
+</head>
+<body>
+  <ul id="test"></ul>
+  <div id="md"></div>
+
+  <script>
+    $(function() {
+      // 初始化分页
+      $('#md').jPagination({
+        isAjax: true,
+        url: 'http://xxxxx',
+        limitName: 'limit',
+        offsetOrPageNum: 0,
+        offsetName: 'offset',
+        otherData: {
+          other: 'other data'
+        },
+        resTotalNumOrPageNum: 0,
+        resTotalName: ['count'],
+        size: 'md',
+        callback: {
+          success: function(currentPage, res) {
+            console.log('当前页: ', currentPage);
+            console.log('数据: ', res);
+
+            $("#test").html('');
+            for (var i = 0; i < res.data.length; i++) {
+              $("#test").append('<li>'+ res.data[i]._id +'</li>');
+            }
+          },
+          error: function(err) {
+            console.log('错误: ', err);
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

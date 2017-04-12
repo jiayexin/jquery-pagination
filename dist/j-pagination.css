@@ -1,0 +1,69 @@
+.j-pagination {
+  overflow: auto;
+}
+
+.j-pagination > ul {
+  margin: 0;
+  padding: 0;
+}
+
+.j-pagination > ul > li {
+  display: inline;
+}
+
+.j-pagination > ul > li:first-child > a {
+  margin-left: 0;
+}
+
+.j-pagination > ul > li > a {
+  padding: 5px 10px;
+  margin-left: -1px;
+  font-size: 12px;
+  line-height: 1.5;
+  position: relative;
+  float: left;
+  color: #337ab7;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.j-pagination > ul > li > a:focus,
+.j-pagination > ul > li > a:hover {
+  z-index: 2;
+  color: #23527c;
+  background-color: #eee;
+}
+
+.j-pagination > ul > li.active > a,
+.j-pagination > ul > li.active > a:focus,
+.j-pagination > ul > li.active > a:hover {
+  z-index: 3;
+  color: #fff;
+  cursor: default;
+  background-color: #337ab7;
+  border-color: #337ab7;
+}
+
+.j-pagination > ul > li.disabled > a,
+.j-pagination > ul > li.disabled > a:focus,
+.j-pagination > ul > li.disabled > a:hover {
+  color: #aaa;
+  cursor: not-allowed;
+  background-color: #fff;
+}
+
+.j-pagination-sm > ul > li > a {
+  padding: 5px 10px !important;
+  font-size: 12px !important;
+}
+
+.j-pagination-md > ul > li > a {
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+}
+
+.j-pagination-lg > ul > li > a {
+  padding: 8px 15px !important;
+  font-size: 16px !important;
+}

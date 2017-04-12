@@ -1,0 +1,19 @@
+{
+  "name": "jquery.j-pagination",
+  "version": "1.0.4",
+  "description": "分页插件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jquery",
+    "pagination"
+  ],
+  "author": {
+    "name": "Jia Yexin"
+  },
+  "license": "ISC",
+  "dependencies": {},
+  "directories": {}
+}
